@@ -1,15 +1,33 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
+import styles from './Navbar.module.css';
 
 function Navbar() {
+  const location = useLocation();
   return (
-    <nav>
-      <ul>
+    <nav className={styles.nav}>
+      <ul className={styles.list}>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink
+            to="/"
+            activeClassName={styles.active}
+            className={`${styles.navLink} ${
+              location.pathname === '/' ? styles.active : ''
+            }`}
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/movies">Movies</Link>
+          <NavLink
+            to="/MoviesPage"
+            activeClassName={styles.active}
+            className={`${styles.navLink} ${
+              location.pathname === '/MoviesPage' ? styles.active : ''
+            }`}
+          >
+            Movies
+          </NavLink>
         </li>
       </ul>
     </nav>

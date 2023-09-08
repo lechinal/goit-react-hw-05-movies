@@ -1,0 +1,21 @@
+.nav {
+  background-color: lightgray;
+}
+.navLink {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+}
+.navLink.active {
+  color: red;
+  font-weight: 800;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  height: 50px;
+}
