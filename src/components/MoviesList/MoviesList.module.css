@@ -1,0 +1,16 @@
+.MovieList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  list-style-type: none;
+  width: 100%;
+}
+.elementHpage {
+  margin: 10px;
+  text-align: center;
+  transition: all 300ms ease-in-out 0s;
+}
+.elementHpage:hover {
+  box-shadow: 0 0 13px 0 rgb(3, 37, 65);
+}

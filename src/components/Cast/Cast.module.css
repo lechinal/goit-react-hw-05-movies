@@ -1,0 +1,20 @@
+.actorsList {
+  list-style: none;
+  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.actorsListElement {
+  flex: 1;
+  margin: 8px;
+  text-align: center;
+}
+
+.actorsName {
+  font-size: 12px;
+}
+
+.actorsCharacter {
+  font-size: 11px;
+}

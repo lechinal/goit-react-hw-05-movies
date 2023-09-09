@@ -1,16 +1,17 @@
+// import React from 'react';
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import styles from './Navbar.module.css';
 
-function Navbar() {
+export const Navbar = () => {
   const location = useLocation();
   return (
-    <nav className={styles.nav}>
+    <main className={styles.nav}>
       <ul className={styles.list}>
         <li>
           <NavLink
             to="/"
-            activeClassName={styles.active}
+            activeclassname={styles.active}
             className={`${styles.navLink} ${
               location.pathname === '/' ? styles.active : ''
             }`}
@@ -20,18 +21,16 @@ function Navbar() {
         </li>
         <li>
           <NavLink
-            to="/MoviesPage"
-            activeClassName={styles.active}
+            to="/Movies"
+            activeclassname={styles.active}
             className={`${styles.navLink} ${
-              location.pathname === '/MoviesPage' ? styles.active : ''
+              location.pathname === '/Movies' ? styles.active : ''
             }`}
           >
             Movies
           </NavLink>
         </li>
       </ul>
-    </nav>
+    </main>
   );
-}
-
-export default Navbar;
+};

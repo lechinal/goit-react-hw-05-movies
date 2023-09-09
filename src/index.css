@@ -15,16 +15,6 @@ code {
 }
 
 /* home page styles */
-.hpage {
-  list-style-type: none;
-  padding: 0;
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 
 .hpage li {
   margin: 10px;

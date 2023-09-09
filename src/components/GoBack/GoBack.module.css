@@ -1,0 +1,19 @@
+.backBtn {
+  display: block;
+  height: 50px;
+  width: 60px;
+  background-color: gray;
+  font-size: 1.3em;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.backBtn:hover {
+  background-color: #ff9632;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px #34c0dc;
+}
+.backBtnDiv {
+  padding-left: 28px;
+}
