@@ -32,7 +32,7 @@ export const MoviesDetails = () => {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
-    navigate(location.state.from);
+    navigate('/');
   };
 
   useEffect(() => {
