@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCast } from 'Services/Api';
 import styles from './Cast.module.css';
+import PropTypes from 'prop-types';
 
 export const Cast = () => {
   const [cast, setCast] = useState([]);
@@ -42,4 +43,17 @@ export const Cast = () => {
       </ul>
     </div>
   );
+};
+
+// prop-types
+Cast.propTypes = {
+  cast: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      profile_path: PropTypes.string,
+      name: PropTypes.string.isRequired,
+      character: PropTypes.string.isRequired,
+    })
+  ),
+  movieId: PropTypes.string.isRequired,
 };

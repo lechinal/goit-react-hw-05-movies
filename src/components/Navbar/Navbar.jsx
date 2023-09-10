@@ -34,3 +34,5 @@ export const Navbar = () => {
     </main>
   );
 };
+
+// prop-types

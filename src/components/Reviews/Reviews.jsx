@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getReviews } from 'Services/Api';
+// import PropTypes from 'prop-types';
 
 import styles from '../Reviews/Reviews.module.css';
 
@@ -47,3 +48,5 @@ export const Reviews = () => {
   );
 };
 export default Reviews;
+
+// prop-types

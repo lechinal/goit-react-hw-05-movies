@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 // import { useEffect, useState } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import styles from './MoviesList.module.css';
+import PropTypes from 'prop-types';
 // import * as api from '../../Services/Api';
 // import baseURL from 'Services/Api';
 
@@ -32,4 +33,16 @@ export const MoviesList = ({ movies }) => {
       ))}
     </ul>
   );
+};
+
+// prop-types
+
+MoviesList.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      poster_path: PropTypes.string,
+      title: PropTypes.string.isRequired,
+    })
+  ),
 };
