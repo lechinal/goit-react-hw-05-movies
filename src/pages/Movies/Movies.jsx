@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import { useSearchParams, useNavigate, useLocation } from 'react-router-dom';
 import { GoSearch } from 'react-icons/go';
 import { MdOutlineKeyboardBackspace } from 'react-icons/md';
 import { MoviesList } from 'components/MoviesList/MoviesList';
@@ -11,6 +11,7 @@ export const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleKeyDown = e => {
     if (e.key === 'Enter') {
@@ -32,7 +33,7 @@ export const Movies = () => {
   };
 
   const handleBackClick = () => {
-    navigate(-1);
+    navigate('/');
   };
 
   useEffect(() => {
@@ -48,7 +49,7 @@ export const Movies = () => {
       <form onSubmit={handleSubmit} className={styles.searchForm}>
         <button
           className={styles.backBtn}
-          type="buton"
+          type="button"
           onClick={handleBackClick}
         >
           <MdOutlineKeyboardBackspace />
