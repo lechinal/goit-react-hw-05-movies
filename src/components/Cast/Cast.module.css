@@ -11,10 +11,19 @@
   text-align: center;
 }
 
+.actorsListElement:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
 .actorsName {
   font-size: 12px;
 }
 
 .actorsCharacter {
   font-size: 11px;
+}
+
+.castDiv {
+  background-color: #e8e8e8;
+  padding-top: 20px;
 }

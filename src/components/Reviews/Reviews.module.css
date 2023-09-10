@@ -1,0 +1,29 @@
+.listElementReviews {
+  list-style: none;
+  border-bottom: 2px solid black;
+  padding: 10px 0;
+}
+
+.authorName {
+  padding-left: 15px;
+  font-style: italic;
+}
+.authorName::before {
+  font-weight: bold;
+  content: 'Author: ';
+}
+
+.reviewContent:hover {
+  transform: scale(0.9);
+  display: inline-block;
+}
+
+.errorMessage {
+  padding-left: 30px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.reviewsDiv {
+  background-color: #e8e8e8;
+}

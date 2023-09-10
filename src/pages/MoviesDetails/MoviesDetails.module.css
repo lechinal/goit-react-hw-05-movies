@@ -15,6 +15,11 @@
 }
 .rightDiv {
 }
+
+.rightDivMovieTitle {
+  font-style: italic;
+}
+
 .CastReviews {
   display: flex;
   justify-content: center;
@@ -28,4 +33,30 @@
   font-size: 25px;
   font-weight: bold;
   color: lightseagreen;
+}
+
+.genresList {
+  list-style: none;
+  display: inline-flex;
+  gap: 12px;
+}
+.genresElement {
+  padding: 8px;
+  font-size: 13px;
+  color: white;
+  background-color: rgb(138, 43, 226);
+  border-radius: 10px;
+  font-weight: bold;
+}
+.genresElement:hover {
+  background-color: gray;
+  cursor: auto;
+}
+
+.UserScore {
+  font-style: italic;
+}
+.UserScore::before {
+  font-weight: bold;
+  content: 'User Score: ';
 }

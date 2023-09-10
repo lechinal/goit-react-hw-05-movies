@@ -13,4 +13,5 @@
 }
 .elementHpage:hover {
   box-shadow: 0 0 13px 0 rgb(3, 37, 65);
+  transform: scale(0.9);
 }

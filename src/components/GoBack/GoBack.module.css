@@ -13,6 +13,7 @@
 .backBtn:hover {
   background-color: #ff9632;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px #34c0dc;
+  transform: scale(1.1);
 }
 .backBtnDiv {
   padding-left: 28px;

@@ -11,7 +11,7 @@ export const Home = () => {
     });
   }, []);
   return (
-    <div>
+    <div className={styles.homeDiv}>
       <h1 className={styles.titleHpage}>Trending today</h1>
       <MoviesList movies={movies} />
     </div>

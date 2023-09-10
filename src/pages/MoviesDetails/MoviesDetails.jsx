@@ -12,7 +12,7 @@ import { getMovieById, getUserScore, getGenresById } from 'Services/Api';
 import { GoBackButton } from 'components/GoBack/GoBack';
 
 const baseUrl = 'https://image.tmdb.org/t/p/w500/';
-
+const defaultImage = `http://www.suryalaya.org/images/no_image.jpg`;
 // const {
 //   name,
 //   title,
@@ -43,7 +43,7 @@ export const MoviesDetails = () => {
     ]).then(([movieData, scoreData, genresData]) => {
       setMovie(movieData);
       setScore(scoreData);
-      setGenres(genresData.genres);
+      setGenres(genresData);
     });
   }, [movieId]);
 
@@ -59,20 +59,31 @@ export const MoviesDetails = () => {
           <div className={styles.leftDiv}>
             <img
               className={styles.imageMovies}
-              src={`${baseUrl + movie.poster_path}`}
+              src={
+                movie.poster_path
+                  ? `${baseUrl + movie.poster_path}`
+                  : defaultImage
+              }
               alt={movie.title}
+              width={300}
             />
           </div>
           <div className={styles.rightDiv}>
-            <h1 className={styles.rightDivMovieTitle}>{movie.title}</h1>
-            <p className={styles.UserScore}> User Score: {score}%</p>
+            <h1 className={styles.rightDivMovieTitle}>
+              {movie.title}
+              {movie.release_date &&
+                `(${new Date(movie.release_date).getFullYear()})`}
+            </h1>
+            <p className={styles.UserScore}> {score.toFixed(2)}%</p>
             <h3 className={styles.overviewTitle}>Overview</h3>
             <p className={styles.overviewDetails}>{movie.overview}</p>
             <h3 className={styles.genresTitle}>Genres</h3>
 
             <ul className={styles.genresList}>
               {genres?.map(genre => (
-                <li key={genre.id}>{genre.name}</li>
+                <li className={styles.genresElement} key={genre.id}>
+                  {genre.name}
+                </li>
               ))}
             </ul>
           </div>

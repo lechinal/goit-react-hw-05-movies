@@ -13,20 +13,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-/* home page styles */
-
-.hpage li {
-  margin: 10px;
-  text-align: center;
-}
-
-.hpage li a {
-  text-decoration: none;
-  color: #333;
-}
-
-.hpage li img {
-  max-width: 100%;
-  height: auto;
-}

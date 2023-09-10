@@ -8,7 +8,7 @@ export const Navbar = () => {
   return (
     <main className={styles.nav}>
       <ul className={styles.list}>
-        <li>
+        <li className={styles.element}>
           <NavLink
             to="/"
             activeclassname={styles.active}
@@ -19,7 +19,7 @@ export const Navbar = () => {
             Home
           </NavLink>
         </li>
-        <li>
+        <li className={styles.element}>
           <NavLink
             to="/Movies"
             activeclassname={styles.active}

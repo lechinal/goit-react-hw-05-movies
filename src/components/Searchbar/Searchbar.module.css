@@ -32,5 +32,6 @@
   transition: background-color 0.3s ease;
 }
 .searchBtn:hover {
+  transform: scale(1.1);
   background-color: #ff9632;
 }
